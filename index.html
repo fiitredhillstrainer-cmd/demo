@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>D Divya — Portfolio</title>
+
+  <!-- BLUE + BLACK THEME -->
+  <style>
+    :root{
+      --accent:#1e90ff;   /* Blue */
+      --muted:#bbbbbb;    /* Light Gray */
+      --card:#1a1a1a;     /* Dark Card */
+      --radius:14px;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+    }
+
+    body{
+      margin:0;
+      background:#000000;
+      color:#ffffff;
+      padding:24px;
+    }
+
+    .container{
+      max-width:900px;
+      margin:12px auto;
+      background:#111111;
+      border-radius:16px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.8);
+      overflow:hidden;
+    }
+
+    header{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      padding:28px;
+      background:linear-gradient(90deg,rgba(30,144,255,0.25),rgba(0,0,0,0.3));
+    }
+
+    .avatar{
+      width:88px;height:88px;border-radius:12px;
+      background:#000000;
+      display:flex;align-items:center;justify-content:center;
+      font-weight:700;color:var(--accent);
+      font-size:26px;
+      border:2px solid #1e90ff77;
+    }
+
+    h1{margin:0;font-size:26px;color:white}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+
+    .main{
+      display:grid;
+      grid-template-columns:1fr 320px;
+      gap:24px;
+      padding:24px;
+    }
+    @media(max-width:820px){ .main{grid-template-columns:1fr} }
+
+    .card{
+      background:#1a1a1a;
+      padding:18px;
+      border-radius:12px;
+      border:1px solid #222;
+    }
+
+    .section{margin-bottom:18px}
+
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+
+    .skill{
+      background:#000;
+      padding:8px 10px;
+      border-radius:10px;
+      border:1px solid #1e90ff55;
+      font-size:13px;
+      box-shadow:0 5px 12px rgba(30,144,255,0.2);
+    }
+
+    .projects .proj{
+      margin-bottom:12px;
+      padding:12px;
+      background:#000;
+      border-radius:10px;
+      border:1px solid #1e1e1e;
+    }
+
+    .contact-list{
+      list-style:none;padding:0;margin:0;
+      display:flex;flex-direction:column;gap:8px
+    }
+
+    a.btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:10px;
+      background:var(--accent);
+      color:white;
+      text-decoration:none;
+      font-weight:600;
+      box-shadow:0 8px 20px rgba(30,144,255,0.4);
+    }
+
+    footer{
+      padding:18px;
+      border-top:1px solid #222;
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="avatar">ND</div>
+      <div>
+        <h1> D Divya</h1>
+        <p class="lead">Python & Full Stack Developer • Chennai</p>
+      </div>
+    </header>
+
+    <div class="main">
+
+      <div>
+        <div class="section card">
+          <h2 style="margin:0 0 8px 0">About Me</h2>
+          <p>I am a motivated Python & Full Stack developer passionate about building web apps and solving real problems.</p>
+        </div>
+
+        <div class="section card">
+          <h3 style="margin-top:0">Projects</h3>
+          <div class="projects">
+
+            <div class="proj">
+              <strong>ATM Simulation Program</strong>
+              <div style="color:var(--muted);font-size:13px">
+                Deposit, withdraw, PIN verification & balance system.
+              </div>
+            </div>
+
+            <div class="proj">
+              <strong>Tkinter Mini App</strong>
+              <div style="color:var(--muted);font-size:13px">
+                GUI with buttons, inputs & functions.
+              </div>
+            </div>
+
+            <div class="proj">
+              <strong>Portfolio Website</strong>
+              <div style="color:var(--muted);font-size:13px">
+                This responsive design.
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="section card">
+          <h3 style="margin-top:0">Skills</h3>
+          <div class="skills" style="margin-top:6px">
+            <div class="skill">Python</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Tkinter</div>
+            <div class="skill">Git & GitHub</div>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card section">
+          <h3 style="margin-top:0">Contact</h3>
+          <ul class="contact-list" style="margin-top:8px">
+            <li>Email: <strong>nishadivya717@gmail.com</strong></li>
+            <li>Phone: <strong>+91 9585808716</strong></li>
+            <li>Location: Chennai</li>
+          </ul>
+          <div style="margin-top:12px">
+            <a class="btn" href="mailto nishadivya717@gmail.com">Email Me</a>
+          </div>
+        </div>
+
+        <div class="card section">
+          <h3 style="margin-top:0">Languages</h3>
+          <p style="margin:6px 0 0">English, Tamil</p>
+        </div>
+      </aside>
+
+    </div>
+
+    <footer>© <span id="year"></span>D Divya • Dark Blue Theme</footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
